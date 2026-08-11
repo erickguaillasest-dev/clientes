@@ -1,0 +1,33 @@
+<button type="button" (click)="setHabilitar()" class="btn btn-primary my-3">
+    {{ habilitar ? 'Ocultar' : 'Mostrar' }} cursos
+</button>
+
+<div class="card">
+    <div class="card-header">
+        <h3>LISTADO DE CURSOS</h3>
+        Listado de cursos
+    </div>
+    
+    <ul class="list-group" *ngIf="habilitar">
+        <li class="list-group-item">
+            <h5>TypeScript</h5>
+            <ul class="list-group mt-2">
+                <li class="list-group-item" *ngFor="let temas of listatemasTS">{{ temas }}</li>
+            </ul>
+        </li>
+
+        <li class="list-group-item">
+            <h5>JavaScript</h5>
+            <ul class="list-group mt-2">
+                <li class="list-group-item" *ngFor="let temas of listatemasJS">{{ temas }}</li>
+            </ul>
+        </li>
+
+        <li class="list-group-item">
+            <h5>C#</h5>
+            <ul class="list-group mt-2">
+                <li class="list-group-item" *ngFor="let temas of listatemasC">{{ temas }}</li>
+            </ul>
+        </li>
+    </ul>
+</div>
