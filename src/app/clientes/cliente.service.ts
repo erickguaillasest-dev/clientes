@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Cliente } from './cliente';
-import { CLIENTES } from './clientes.json';
 import { Observable } from 'rxjs'; 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
@@ -16,13 +15,16 @@ export class ClienteService {
   constructor(private http: HttpClient) {}
 
   getClientes(): Observable<Cliente[]> {
-    return this.http.get<Cliente[]>(this.urlEndPoint).pipe(
-      map(clientesBD => [...CLIENTES, ...clientesBD])
+    return this.http.get(this.urlEndPoint).pipe(
+      map(response => response as Cliente[])
     );
   }
 
-
   create(cliente: Cliente): Observable<Cliente> {
     return this.http.post<Cliente>(this.urlEndPoint, cliente, { headers: this.httpHeaders });
+  }
+
+  getCliente(id: any): Observable<Cliente> {
+    return this.http.get<Cliente>(`${this.urlEndPoint}/${id}`);
   }
 }

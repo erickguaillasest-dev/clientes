@@ -1,0 +1,54 @@
+<div class="container my-4">
+  <div class="card border-info mb-4">
+    <div class="card-header bg-info text-white">Registrar Proveedor</div>
+    <div class="card-body">
+      <form (ngSubmit)="guardar()">
+        <div class="row">
+          <div class="col-md-4 mb-2">
+            <input type="text" class="form-control" placeholder="Nombre" [(ngModel)]="nuevoProveedor.nombre" name="nombre" required>
+          </div>
+          <div class="col-md-4 mb-2">
+            <input type="text" class="form-control" placeholder="URL Fotografía" [(ngModel)]="nuevoProveedor.fotografia" name="fotografia" required>
+          </div>
+          <div class="col-md-4 mb-2">
+            <input type="text" class="form-control" placeholder="URL Red Social" [(ngModel)]="nuevoProveedor.redSocial" name="redSocial" required>
+          </div>
+          <div class="col-md-12 mb-2">
+            <input type="text" class="form-control" placeholder="Descripción" [(ngModel)]="nuevoProveedor.descripcion" name="descripcion" required>
+          </div>
+          <div class="col-md-4 mb-2">
+            <input type="text" class="form-control" placeholder="Producto Top 1" [(ngModel)]="prod1" name="p1" required>
+          </div>
+          <div class="col-md-4 mb-2">
+            <input type="text" class="form-control" placeholder="Producto Top 2" [(ngModel)]="prod2" name="p2" required>
+          </div>
+          <div class="col-md-4 mb-2">
+            <input type="text" class="form-control" placeholder="Producto Top 3" [(ngModel)]="prod3" name="p3" required>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">Guardar Proveedor</button>
+      </form>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let prov of proveedores">
+      <div class="card" style="width: 100%;">
+        <img [src]="prov.fotografia" class="card-img-top" alt="Foto del Proveedor" style="height: 180px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">{{ prov.nombre }}</h5>
+          <p class="card-text">{{ prov.descripcion }}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-muted"><strong>Top 3 Productos:</strong></li>
+          <li class="list-group-item" *ngFor="let prod of prov.productosMasVendidos">{{ prod }}</li>
+        </ul>
+        <div class="card-body d-flex justify-content-between align-items-center">
+          <a [href]="prov.redSocial" target="_blank" class="card-link">Red Social</a>
+          <button class="btn btn-danger btn-sm" (click)="eliminar(prov.id)">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

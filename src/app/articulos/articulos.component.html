@@ -1,0 +1,68 @@
+<div class="container my-4">
+  <div class="card border-primary mb-3">
+    <div class="card-header bg-primary text-white">Gestión de Artículos</div>
+    <div class="card-body">
+      
+    
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Buscar por código, nombre o categoría..." 
+                 [(ngModel)]="terminoBusqueda" (keyup)="buscar()">
+        </div>
+      </div>
+
+    
+      <div class="card mb-4 bg-light">
+        <div class="card-body">
+          <h5 class="card-title">{{ articuloSeleccionado.id ? 'Editar Artículo' : 'Nuevo Artículo' }}</h5>
+          <form (ngSubmit)="guardar()">
+            <div class="row">
+              <div class="col-md-3 mb-2">
+                <input type="text" class="form-control" placeholder="Código" [(ngModel)]="articuloSeleccionado.codigo" name="codigo" required>
+              </div>
+              <div class="col-md-3 mb-2">
+                <input type="text" class="form-control" placeholder="Nombre" [(ngModel)]="articuloSeleccionado.nombre" name="nombre" required>
+              </div>
+              <div class="col-md-3 mb-2">
+                <input type="text" class="form-control" placeholder="Categoría" [(ngModel)]="articuloSeleccionado.categoria" name="categoria" required>
+              </div>
+              <div class="col-md-3 mb-2">
+                <input type="number" class="form-control" placeholder="Precio" [(ngModel)]="articuloSeleccionado.precio" name="precio" required>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-success mt-2">{{ articuloSeleccionado.id ? 'Actualizar' : 'Guardar' }}</button>
+            <button type="button" class="btn btn-secondary mt-2 ms-2" (click)="limpiarFormulario()">Cancelar</button>
+          </form>
+        </div>
+      </div>
+
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let art of articulosFiltrados">
+            <td>{{ art.codigo }}</td>
+            <td>{{ art.nombre }}</td>
+            <td>{{ art.categoria }}</td>
+            <td>${{ art.precio }}</td>
+            <td>
+              <button class="btn btn-warning btn-sm me-2" (click)="editar(art)">Editar</button>
+              <button class="btn btn-danger btn-sm" (click)="eliminar(art.id)">Eliminar</button>
+            </td>
+          </tr>
+          <tr *ngIf="!articulosFiltrados || articulosFiltrados.length === 0">
+            <td colspan="5" class="text-center text-muted">No se encontraron artículos registrados.</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
