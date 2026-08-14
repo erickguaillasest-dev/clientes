@@ -3,25 +3,49 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+<<<<<<< HEAD
     "outDir": "./dist/out-tsc",
     "strict": true,
+=======
+>>>>>>> fdf0f03 (cambio coin mejor estrructura)
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "isolatedModules": true,
+<<<<<<< HEAD
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022"
+=======
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "preserve"
+>>>>>>> fdf0f03 (cambio coin mejor estrructura)
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
+<<<<<<< HEAD
     "strictInputAccessModifiers": true,
     "strictTemplates": true
   }
+=======
+    "strictInputAccessModifiers": true
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ]
+>>>>>>> fdf0f03 (cambio coin mejor estrructura)
 }

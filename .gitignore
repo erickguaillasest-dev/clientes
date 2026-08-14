@@ -6,6 +6,10 @@
 /out-tsc
 /bazel-out
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fdf0f03 (cambio coin mejor estrructura)
 # Node
 /node_modules
 npm-debug.log
@@ -26,6 +30,10 @@ yarn-error.log
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+<<<<<<< HEAD
+=======
+!.vscode/mcp.json
+>>>>>>> fdf0f03 (cambio coin mejor estrructura)
 .history/*
 
 # Miscellaneous
@@ -36,6 +44,10 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
+<<<<<<< HEAD
+=======
+__screenshots__/
+>>>>>>> fdf0f03 (cambio coin mejor estrructura)
 
 # System files
 .DS_Store

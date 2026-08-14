@@ -5,11 +5,20 @@
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
     "types": [
+<<<<<<< HEAD
       "jasmine"
     ]
   },
   "include": [
     "src/**/*.spec.ts",
     "src/**/*.d.ts"
+=======
+      "vitest/globals"
+    ]
+  },
+  "include": [
+    "src/**/*.d.ts",
+    "src/**/*.ts"
+>>>>>>> fdf0f03 (cambio coin mejor estrructura)
   ]
 }

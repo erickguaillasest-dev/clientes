@@ -1,14 +1,23 @@
 {
+<<<<<<< HEAD
   "name": "clientes",
+=======
+  "name": "clientes-app",
+>>>>>>> fdf0f03 (cambio coin mejor estrructura)
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+<<<<<<< HEAD
     "build": "ng build",
+=======
+    "build": "node set-env.js && ng build --configuration production",
+>>>>>>> fdf0f03 (cambio coin mejor estrructura)
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
   "private": true,
+<<<<<<< HEAD
   "dependencies": {
     "@angular/common": "^19.2.0",
     "@angular/compiler": "^19.2.0",
@@ -34,5 +43,27 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.7.2"
+=======
+  "packageManager": "npm@11.13.0",
+  "dependencies": {
+    "@angular/common": "^22.0.0",
+    "@angular/compiler": "^22.0.0",
+    "@angular/core": "^22.0.0",
+    "@angular/forms": "^22.0.0",
+    "@angular/platform-browser": "^22.0.0",
+    "@angular/router": "^22.0.0",
+    "rxjs": "~7.8.0",
+    "sweetalert2": "^11.26.25",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^22.0.4",
+    "@angular/cli": "^22.0.4",
+    "@angular/compiler-cli": "^22.0.0",
+    "jsdom": "^28.0.0",
+    "prettier": "^3.8.1",
+    "typescript": "~6.0.2",
+    "vitest": "^4.0.8"
+>>>>>>> fdf0f03 (cambio coin mejor estrructura)
   }
 }

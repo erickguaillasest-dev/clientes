@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # Clientes
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.27.
+=======
+# ClientesApp
+
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.4.
+>>>>>>> fdf0f03 (cambio coin mejor estrructura)
 
 ## Development server
 
@@ -38,7 +44,11 @@ This will compile your project and store the build artifacts in the `dist/` dire
 
 ## Running unit tests
 
+<<<<<<< HEAD
 To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+=======
+To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+>>>>>>> fdf0f03 (cambio coin mejor estrructura)
 
 ```bash
 ng test

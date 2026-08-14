@@ -6,10 +6,18 @@
     "outDir": "./out-tsc/app",
     "types": []
   },
+<<<<<<< HEAD
   "files": [
     "src/main.ts"
   ],
   "include": [
     "src/**/*.d.ts"
+=======
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "src/**/*.spec.ts"
+>>>>>>> fdf0f03 (cambio coin mejor estrructura)
   ]
 }
