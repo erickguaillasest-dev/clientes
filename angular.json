@@ -1,19 +1,13 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-<<<<<<< HEAD
-  "newProjectRoot": "projects",
-  "projects": {
-    "clientes": {
-=======
   "cli": {
     "packageManager": "npm",
-    "analytics": "099cdbce-e524-42da-8841-43a0ba91d949"
+    "analytics": false
   },
   "newProjectRoot": "projects",
   "projects": {
-    "clientes-app": {
->>>>>>> fdf0f03 (cambio coin mejor estrructura)
+    "clientes": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -31,8 +25,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-<<<<<<< HEAD
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular/build:application",
           "options": {
             "outputPath": "dist/clientes",
             "index": "src/index.html",
@@ -40,23 +33,6 @@
             "polyfills": [
               "zone.js"
             ],
-            "tsConfig": "tsconfig.app.json",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
-            "styles": [
-              "src/styles.css",
-              "assets/css/bootstrap.min.css"
-            ],
-            "scripts": [
-              "assets/js/bootstrap.bundle.min.js"
-=======
-          "builder": "@angular/build:application",
-          "options": {
-            "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
@@ -69,7 +45,6 @@
             ],
             "scripts": [
               "src/assets/js/bootstrap.bundle.min.js"
->>>>>>> fdf0f03 (cambio coin mejor estrructura)
             ]
           },
           "configurations": {
@@ -97,59 +72,20 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-<<<<<<< HEAD
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
               "buildTarget": "clientes:build:production"
             },
             "development": {
               "buildTarget": "clientes:build:development"
-=======
-          "builder": "@angular/build:dev-server",
-          "configurations": {
-            "production": {
-              "buildTarget": "clientes-app:build:production"
-            },
-            "development": {
-              "buildTarget": "clientes-app:build:development"
->>>>>>> fdf0f03 (cambio coin mejor estrructura)
             }
           },
           "defaultConfiguration": "development"
         },
-<<<<<<< HEAD
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n"
         },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
-            "tsConfig": "tsconfig.spec.json",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
-          }
-        }
-      }
-    }
-  },
-  "cli": {
-    "analytics": false
-  }
-}
-=======
         "test": {
           "builder": "@angular/build:unit-test"
         }
@@ -157,4 +93,3 @@
     }
   }
 }
->>>>>>> fdf0f03 (cambio coin mejor estrructura)
